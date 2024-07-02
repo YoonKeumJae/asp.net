@@ -11,6 +11,27 @@
 
     <ItemGroup>
         <PackageReference Include="Aspire.Hosting.AppHost" Version="8.0.2"/>
+        <PackageReference Include="Numind.AspNetCore.SpaServices.Extensions" Version="1.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="ClientApp\" />
+      <Folder Include="ClientApp\public\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="ClientApp\public\vite.svg" />
+      <None Remove="ClientApp\src\assets\**" />
+      <None Remove="ClientApp\src\App.css" />
+      <None Remove="ClientApp\src\index.css" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="ClientApp\src\assets\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="ClientApp\src\assets\**" />
     </ItemGroup>
 
 </Project>
